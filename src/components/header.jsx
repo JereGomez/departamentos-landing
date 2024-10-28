@@ -10,7 +10,7 @@ const Header = () => {
       expand="lg"
       className="py-3 fixed-top"
       style={{
-        backgroundColor: "rgba(0,0,0,0)",
+        backgroundColor: "rgb(238, 234, 228,0.1)",
         backdropFilter: "blur(3px)",
       }}
     >
