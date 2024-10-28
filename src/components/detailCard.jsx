@@ -1,5 +1,11 @@
 import React from "react";
-import { Col } from "react-bootstrap";
+import { MdBedroomParent, MdKitchen } from "react-icons/md";
+import { GrRestroom } from "react-icons/gr";
+import { FaKitchenSet } from "react-icons/fa6";
+import { IoIosTv } from "react-icons/io";
+import { FaWifi } from "react-icons/fa";
+import { PiTowel } from "react-icons/pi";
+
 import PropTypes from "prop-types";
 import Card from "react-bootstrap/Card";
 
@@ -30,7 +36,7 @@ const DetailCard = ({ department, attribute }) => {
           {department[attribute] && Array.isArray(department[attribute])
             ? department[attribute].map((value) => (
                 <li style={{ listStyleType: "none" }}>
-                  <strong>-</strong> {value}
+                  {value} {selectIcon(value.toLowerCase())}
                 </li>
               ))
             : Object.entries(department[attribute]).map(([key, value]) => (
@@ -42,6 +48,26 @@ const DetailCard = ({ department, attribute }) => {
       </Card.Body>
     </div>
   );
+};
+
+const selectIcon = (attribute) => {
+  switch (true) {
+    case attribute.includes("habitaciones"):
+      console.log("asdasd");
+      return <MdBedroomParent />;
+    case attribute.includes("baño/"):
+      return <GrRestroom />;
+    case attribute.includes("cocina"):
+      return <FaKitchenSet />;
+    case attribute.includes("heladera"):
+      return <MdKitchen />;
+    case attribute.includes("tv"):
+      return <IoIosTv />;
+    case attribute.includes("wifi"):
+      return <FaWifi />;
+    case attribute.includes("toallas"):
+      return <PiTowel />;
+  }
 };
 
 DetailCard.propTypes = {

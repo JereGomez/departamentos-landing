@@ -3,20 +3,39 @@ import { Form, Button, Card, Row, Col } from "react-bootstrap";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
-
-const BookingForm = () => {
+import { sendEmailReserva } from "../js/emailSender";
+const ReservationForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [adults, setAdults] = useState(1);
   const [children, setChildren] = useState(0);
   const [message, setMessage] = useState("");
-  const [startDate, setStartDate] = useState(new Date());
-  const [endDate, setEndDate] = useState(new Date());
+  const [startDate, setStartDate] = useState(null);
+  const [endDate, setEndDate] = useState(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log({ name, email, adults, children, message, startDate, endDate });
+
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      to_name: "Admin",
+      desde: startDate,
+      hasta: endDate,
+      adultos: adults,
+      ninos: children,
+      message: message,
+      // from_name: name,
+      // from_email: email,
+      // // to_name: "Your Name or Company", // Change this to your name or company
+      // message: message,
+      // email: email,
+      // adults: adults,
+      // children: children,
+      // start_date: startDate,
+      // end_date: endDate,
+    };
+    sendEmailReserva(templateParams);
   };
 
   return (
@@ -28,7 +47,7 @@ const BookingForm = () => {
       }}
     >
       <Card
-        className="shadow-sm "
+        className="shadow-sm"
         style={{
           backgroundColor: "rgb(238, 234, 228)",
           border: "none",
@@ -131,7 +150,7 @@ const BookingForm = () => {
           <Row>
             <Col md={6}>
               <Form.Group controlId="formStartDate">
-                <Form.Label style={{ padding: "1%" }}>From Date</Form.Label>
+                <Form.Label style={{ padding: "1%" }}>Desde</Form.Label>
                 <DatePicker
                   selected={startDate}
                   onChange={(date) => setStartDate(date)}
@@ -147,7 +166,7 @@ const BookingForm = () => {
             </Col>
             <Col md={6}>
               <Form.Group controlId="formEndDate">
-                <Form.Label style={{ padding: "1%" }}>To Date</Form.Label>
+                <Form.Label style={{ padding: "1%" }}>Hasta</Form.Label>
                 <DatePicker
                   selected={endDate}
                   onChange={(date) => setEndDate(date)}
@@ -180,4 +199,4 @@ const BookingForm = () => {
   );
 };
 
-export default BookingForm;
+export default ReservationForm;
