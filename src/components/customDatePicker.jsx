@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form, Button, Container, Row, Col } from "react-bootstrap";
+import { Form, Button, Card, Row, Col } from "react-bootstrap";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
@@ -22,18 +22,27 @@ const BookingForm = () => {
   return (
     <div
       style={{
-        backgroundColor: "rgb(231, 231, 218,0.3)",
+        backgroundColor: "rgb(238, 234, 228)",
         border: "none",
-        paddingTop: "10px",
-        paddingBottom: "10px",
         borderRadius: "15px",
       }}
     >
-      <Container className="">
-        <h2 className="text-center mb-4">
+      <Card
+        className="shadow-sm "
+        style={{
+          backgroundColor: "rgb(238, 234, 228)",
+          border: "none",
+          color: "rgb(70,70,70)",
+          height: "100%",
+        }}
+      >
+        <h2
+          className="text-center mb-4"
+          style={{ color: "rgb(30,30,30)", paddingTop: "1%" }}
+        >
           Consulta disponibilidad para tu reserva
         </h2>
-        <Form onSubmit={handleSubmit}>
+        <Form onSubmit={handleSubmit} style={{ padding: "5%" }}>
           <Row>
             <Col md={6}>
               <Form.Group controlId="formName">
@@ -44,7 +53,10 @@ const BookingForm = () => {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   required
-                  style={{ backgroundColor: "rgb(255, 255, 255,0.9)" }}
+                  style={{
+                    backgroundColor: "rgb(255, 255, 255,0.9)",
+                    color: "rgb(70,70,70)",
+                  }}
                 />
               </Form.Group>
             </Col>
@@ -57,7 +69,10 @@ const BookingForm = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  style={{ backgroundColor: "rgb(255, 255, 255,0.9)" }}
+                  style={{
+                    backgroundColor: "rgb(255, 255, 255,0.9)",
+                    color: "rgb(70,70,70)",
+                  }}
                 />
               </Form.Group>
             </Col>
@@ -72,7 +87,10 @@ const BookingForm = () => {
                   value={adults}
                   onChange={(e) => setAdults(e.target.value)}
                   required
-                  style={{ backgroundColor: "rgb(255, 255, 255,0.9)" }}
+                  style={{
+                    backgroundColor: "rgb(255, 255, 255,0.9)",
+                    color: "rgb(70,70,70)",
+                  }}
                 />
               </Form.Group>
             </Col>
@@ -84,13 +102,17 @@ const BookingForm = () => {
                   min="0"
                   value={children}
                   onChange={(e) => setChildren(e.target.value)}
+                  style={{
+                    backgroundColor: "rgb(255, 255, 255,0.9)",
+                    color: "rgb(70,70,70)",
+                  }}
                 />
               </Form.Group>
             </Col>
           </Row>
           <Row>
             <Col md={12}>
-              <Form.Group controlId="formMessage">
+              <Form.Group controlId="formMessage" style={{ paddingBottom: "" }}>
                 <Form.Label>Consulta/Detalles</Form.Label>
                 <Form.Control
                   as="textarea"
@@ -98,7 +120,10 @@ const BookingForm = () => {
                   placeholder="Cantidad de camas, departamento específico que te haya llamado la atención, cualquier duda o especificación que quieras que te respondamos/tengamos en cuenta."
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  style={{ backgroundColor: "rgb(255, 255, 255,0.9)" }}
+                  style={{
+                    backgroundColor: "rgb(255, 255, 255,0.9)",
+                    color: "rgb(70,70,70)",
+                  }}
                 />
               </Form.Group>
             </Col>
@@ -106,27 +131,33 @@ const BookingForm = () => {
           <Row>
             <Col md={6}>
               <Form.Group controlId="formStartDate">
-                <Form.Label>From Date</Form.Label>
+                <Form.Label style={{ padding: "1%" }}>From Date</Form.Label>
                 <DatePicker
                   selected={startDate}
                   onChange={(date) => setStartDate(date)}
                   className="form-control"
                   dateFormat="MMMM d, yyyy"
                   required
-                  style={{ backgroundColor: "rgb(255, 255, 255,0.9)" }}
+                  style={{
+                    backgroundColor: "rgb(255, 255, 255,0.9)",
+                    color: "rgb(70,70,70)",
+                  }}
                 />
               </Form.Group>
             </Col>
             <Col md={6}>
               <Form.Group controlId="formEndDate">
-                <Form.Label>To Date</Form.Label>
+                <Form.Label style={{ padding: "1%" }}>To Date</Form.Label>
                 <DatePicker
                   selected={endDate}
                   onChange={(date) => setEndDate(date)}
                   className="form-control"
                   dateFormat="MMMM d, yyyy"
                   required
-                  style={{ backgroundColor: "rgb(255, 255, 255,0.9)" }}
+                  style={{
+                    backgroundColor: "rgb(255, 255, 255,0.9)",
+                    color: "rgb(70,70,70)",
+                  }}
                 />
               </Form.Group>
             </Col>
@@ -136,13 +167,15 @@ const BookingForm = () => {
             type="submit"
             className="mt-3"
             style={{
+              backgroundColor: "rgb(255, 165, 0)",
+              borderColor: "rgb(255, 165, 0)",
               paddingTop: "5px",
             }}
           >
-            Submit
+            Enviar
           </Button>
         </Form>
-      </Container>
+      </Card>
     </div>
   );
 };

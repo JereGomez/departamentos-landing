@@ -8,19 +8,19 @@ const Testimonials = () => {
       name: "John Doe",
       rating: 5,
       comment:
-        "An unforgettable experience! The beaches were pristine and the local culture was fascinating.",
+        "¡Una experiencia inolvidable! Las playas estaban impecables y la cultura local fue fascinante.",
     },
     {
       name: "Jane Smith",
       rating: 4,
       comment:
-        "Loved the mountain retreat. The views were breathtaking and the accommodations were cozy.",
+        "Me encantó el refugio en la montaña. Las vistas eran impresionantes y el alojamiento muy acogedor.",
     },
     {
       name: "Mike Johnson",
       rating: 5,
       comment:
-        "The cultural tours were amazing. I learned so much about the local history and traditions.",
+        "Los tours culturales fueron increíbles. Aprendí mucho sobre la historia y las tradiciones locales.",
     },
   ];
 
@@ -28,15 +28,18 @@ const Testimonials = () => {
     <div className="py-5" style={{ placeItems: "center" }}>
       <Card
         style={{
-          backgroundColor: "rgb(231, 231, 218,0.3)",
+          backgroundColor: "rgb(238, 234, 228)",
           paddingLeft: "1%",
           paddingRight: "1%",
           border: "none",
           width: "90%",
         }}
       >
-        <h2 className="text-center mb-4" style={{ paddingTop: "1%" }}>
-          What Our Guests Say
+        <h2
+          className="text-center mb-4"
+          style={{ paddingTop: "1%", color: "(rgb:30, 30, 30)" }}
+        >
+          Lo que Dicen Nuestros Huéspedes
         </h2>
         <Row>
           {testimonials.map((testimonial, index) => (
@@ -44,13 +47,14 @@ const Testimonials = () => {
               <Card
                 className="h-100 shadow-sm"
                 style={{
-                  backgroundColor: "rgb(231, 231, 218,0.3)",
+                  backgroundColor: "rgb(238, 234, 228)",
                   border: "none",
+                  color: "rgb(70,70,70)",
                 }}
               >
                 <Card.Body>
                   <div className="d-flex justify-content-between align-items-center mb-3">
-                    <Card.Title style={{ color: "" }}>
+                    <Card.Title style={{ color: "rgb(30,30,30)" }}>
                       {testimonial.name}
                     </Card.Title>
                     <div className="d-flex">
@@ -59,7 +63,7 @@ const Testimonials = () => {
                       ))}
                     </div>
                   </div>
-                  <Card.Text style={{ color: "" }}>
+                  <Card.Text style={{ color: "rgb(70,70,70)" }}>
                     {testimonial.comment}
                   </Card.Text>
                 </Card.Body>

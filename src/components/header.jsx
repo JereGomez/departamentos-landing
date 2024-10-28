@@ -5,7 +5,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { MDBIcon } from "mdb-react-ui-kit";
 
 const Header = () => {
-  console.log("header");
   return (
     <Navbar
       expand="lg"
@@ -21,7 +20,7 @@ const Header = () => {
           <span
             className="site-title"
             style={{
-              color: "black",
+              color: "rgb(30,30,30)",
               fontWeight: "bold",
               //   textShadow: `
               //   -0.25px -0.25px 0 gray,
@@ -37,20 +36,32 @@ const Header = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link as={Link} to="/#welcome" style={{ color: "black" }}>
+            <Nav.Link
+              as={Link}
+              to="/#welcome"
+              style={{ color: "rgb(30,30,30)" }}
+            >
               Inicio
             </Nav.Link>
             <Nav.Link
               as={Link}
               to="/#departmentCards"
-              style={{ color: "black" }}
+              style={{ color: "rgb(30,30,30)" }}
             >
               Departamentos
             </Nav.Link>
-            <Nav.Link as={Link} to="/#reservation" style={{ color: "black" }}>
+            <Nav.Link
+              as={Link}
+              to="/#reservation"
+              style={{ color: "rgb(30,30,30)" }}
+            >
               Consultar Reserva
             </Nav.Link>
-            <Nav.Link as={Link} to="/#contactFooter" style={{ color: "black" }}>
+            <Nav.Link
+              as={Link}
+              to="/#contactFooter"
+              style={{ color: "rgb(30,30,30)" }}
+            >
               Contacto
             </Nav.Link>
           </Nav>

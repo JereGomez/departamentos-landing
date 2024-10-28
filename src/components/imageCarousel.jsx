@@ -30,7 +30,7 @@ const ImageCarouselWithScrollableIndicators = ({ photos }) => {
     <Container
       className="card h-100 "
       style={{
-        backgroundColor: "rgb(231, 231, 218,0.3)",
+        backgroundColor: "rgb(231, 231, 218,0.1)",
         border: "none",
         borderRadius: "15px",
       }}
