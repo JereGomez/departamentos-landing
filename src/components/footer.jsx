@@ -11,10 +11,10 @@ const Footer = ({ id }) => {
     <footer
       id={id}
       className="footer py-5  text-light"
-      style={{ paddingTop: "90px", backgroundColor: "rgb(231, 231, 218)" }}
+      style={{ paddingTop: "90px", backgroundColor: "rgb(180,180,180)" }}
     >
       <Container>
-        <Row className="footer-container" style={{ color: "black" }}>
+        <Row className="footer-container" style={{ color: "rgb(30,30,30)" }}>
           <Col xs={12} md={6} className="mb-4">
             <h3 className="footer-title">Contacto</h3>
             <p className="footer-text">
@@ -23,24 +23,24 @@ const Footer = ({ id }) => {
             <p className="footer-text">Telefono: +54 0000000000</p>
             <p className="footer-text">Email: info@gmail.com</p>
             <div className="social-links d-flex">
-              <a
-                href="#"
-                aria-label="Instagram"
-                className="social-link me-3"
-                style={{ color: "black" }}
-              >
-                <Instagram />
-              </a>
-              <a href="#" aria-label="Airbnb" className="social-link me-3">
-                Airbnb Logo
-              </a>
-              <a href="#" aria-label="Booking" className="social-link">
-                Booking Logo
-              </a>
+              {/* <a
+                  href="#"
+                  aria-label="Instagram"
+                  className="social-link me-3"
+                  style={{ color: "black" }}
+                >
+                  <Instagram />
+                </a>
+                <a href="#" aria-label="Airbnb" className="social-link me-3">
+                  <i class="fa-brands fa-airbnb" style={{ color: "black" }}></i>
+                </a>
+                <a href="#" aria-label="Booking" className="social-link">
+                  Booking Logo
+                </a> */}
             </div>
           </Col>
-          <Col xs={12} md={6} style={{ color: "black" }}>
-            <h3 className="footer-title">Contactate con nosotros</h3>
+          <Col xs={12} md={6} style={{ color: "rgb(30,30,30)" }}>
+            <h3 className="footer-title">Déjanos tu consulta</h3>
             <Form className="footer-form">
               <Form.Group className="mb-3">
                 <Input
@@ -65,7 +65,14 @@ const Footer = ({ id }) => {
                   style={{ backgroundColor: "rgb(255, 255, 255,0.9)" }}
                 />
               </Form.Group>
-              <Button type="submit" className="footer-submit btn-primary">
+              <Button
+                type="submit"
+                className="footer-submit btn-primary"
+                style={{
+                  backgroundColor: "rgb(255, 165, 0)",
+                  borderColor: "rgb(255, 165, 0)",
+                }}
+              >
                 Enviar
               </Button>
             </Form>

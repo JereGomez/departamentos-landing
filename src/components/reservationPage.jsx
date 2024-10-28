@@ -7,10 +7,18 @@ import Map from "./map";
 
 const ReservationPage = ({ id }) => {
   return (
-    <section id={id} style={{ paddingTop: "90px", placeItems: "center" }}>
+    <section
+      id={id}
+      className="py-5"
+      style={{
+        paddingTop: "90px",
+        paddingBottom: "90px",
+        placeItems: "center",
+      }}
+    >
       <Card
         style={{
-          backgroundColor: "rgb(231, 231, 218,0.3)",
+          backgroundColor: "rgb(238, 234, 228)",
           paddingLeft: "1%",
           paddingRight: "1%",
           paddingTop: "1%",
@@ -19,7 +27,7 @@ const ReservationPage = ({ id }) => {
           width: "90%",
         }}
       >
-        <Row className="justify-content-center">
+        <Row>
           <Col lg={6} order={{ xs: 2 }}>
             <Map />
           </Col>

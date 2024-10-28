@@ -7,41 +7,41 @@ const DepartmentCards = ({ id }) => {
   const departments = [
     {
       id: "1",
-      name: "Coastal Paradise",
+      name: "Paraíso en la Costa",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCDugwnk3aFmbxjGQ3syeRBdT-nz9hEJpXZg&s",
-      description: "Experience the beauty of our pristine beaches",
+      description: "Disfruta de la belleza de nuestras playas tranquilas",
       features: [
-        "Sandy beaches",
-        "Water sports",
-        "Seafood restaurants",
-        "Luxury resorts",
+        "Playas de arena",
+        "Deportes acuáticos",
+        "Restaurantes de mariscos",
+        "Departamentos con vista al mar",
       ],
     },
     {
       id: "2",
-      name: "Mountain Retreat",
+      name: "Refugio en la Montaña",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCDugwnk3aFmbxjGQ3syeRBdT-nz9hEJpXZg&s",
-      description: "Escape to the tranquility of our mountain landscapes",
+      description: "Escápate a un entorno natural rodeado de montañas",
       features: [
-        "Hiking trails",
-        "Scenic views",
-        "Fresh mountain air",
-        "Cozy cabins",
+        "Vistas panorámicas",
+        "Senderos para caminatas",
+        "Cerca de centros de ski",
+        "Departamentos acogedores",
       ],
     },
     {
       id: "3",
-      name: "Cultural Hub",
+      name: "Descanso en el Bosque",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCDugwnk3aFmbxjGQ3syeRBdT-nz9hEJpXZg&s",
-      description: "Immerse yourself in the rich history and culture",
+      description: "Conéctate con la naturaleza en un entorno forestal",
       features: [
-        "Historic sites",
-        "Art galleries",
-        "Local cuisine",
-        "Festivals",
+        "Cerca de lagos y ríos",
+        "Áreas de picnic",
+        "Departamentos rústicos",
+        "Acceso a actividades al aire libre",
       ],
     },
   ];
@@ -54,15 +54,19 @@ const DepartmentCards = ({ id }) => {
     >
       <Card
         style={{
-          backgroundColor: "rgb(231, 231, 218,0.3)",
+          backgroundColor: "rgb(238, 234, 228)",
           paddingLeft: "1%",
           paddingRight: "1%",
           border: "none",
           width: "90%",
+          color: "rgb(70,70,70)",
         }}
       >
-        <h2 className="text-center mb-4" style={{ paddingTop: "1%" }}>
-          Nuestros Departamentos
+        <h2
+          className="text-center mb-4"
+          style={{ paddingTop: "1%", color: "rgb(30,30,30)" }}
+        >
+          Elige uno
         </h2>
         <Row>
           {departments.map((dept) => (
@@ -74,13 +78,16 @@ const DepartmentCards = ({ id }) => {
                 <Card
                   className="h-100 shadow-sm"
                   style={{
-                    backgroundColor: "rgb(231, 231, 218,0)",
+                    backgroundColor: "rgb(238, 234, 228)",
                     border: "none",
+                    color: "rgb(70,70,70)",
                   }}
                 >
                   <Card.Img variant="top" src={dept.image} alt={dept.name} />
                   <Card.Body>
-                    <Card.Title style={{ color: "" }}>{dept.name}</Card.Title>
+                    <Card.Title style={{ color: "rgb(30,30,30)" }}>
+                      {dept.name}
+                    </Card.Title>
                     <Card.Text style={{ color: "" }}>
                       {dept.description}
                     </Card.Text>

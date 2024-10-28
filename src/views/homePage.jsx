@@ -9,7 +9,7 @@ const HomePage = () => {
   return (
     <div
       className="page-container"
-      style={{ backgroundColor: "rgb(231, 231, 218,0.3)" }}
+      style={{ backgroundColor: "rgb(238, 234, 228)" }}
     >
       <Header />
       <WelcomeHero id="welcome" title="WelcomeHero" />

@@ -4,12 +4,11 @@ import PropTypes from "prop-types";
 import Card from "react-bootstrap/Card";
 
 const DetailCard = ({ department, attribute }) => {
-  console.log(department[attribute]);
   return (
     <div
       className=" card h-100"
       style={{
-        backgroundColor: "rgb(231, 231, 218,0.3)",
+        backgroundColor: "rgb(238, 234, 228)",
         border: "none",
         borderRadius: "15px",
       }}
@@ -23,13 +22,11 @@ const DetailCard = ({ department, attribute }) => {
       /> */}
       <Card.Body>
         <Card.Title>
-          {attribute == "caracteristicas"
-            ? "Distrubucion y  Equipamiento"
-            : "Servicios"}
+          {attribute == "caracteristicas" ? "¿Qué ofrece?" : "Servicios"}
         </Card.Title>
-        <Card.Text style={{ color: "" }}></Card.Text>
+        <Card.Text style={{ color: "rgb(30,30,30)" }}></Card.Text>
 
-        <div style={{ paddingLeft: "10%" }}>
+        <div style={{ paddingLeft: "10%", color: "rgb(70,70,70)" }}>
           {department[attribute] && Array.isArray(department[attribute])
             ? department[attribute].map((value) => (
                 <li style={{ listStyleType: "none" }}>
@@ -48,11 +45,8 @@ const DetailCard = ({ department, attribute }) => {
 };
 
 DetailCard.propTypes = {
-  department: PropTypes.shape({
-    characteristics: PropTypes.object,
-    equipment: PropTypes.object,
-    others: PropTypes.array,
-  }),
+  department: PropTypes.object,
+  attribute: PropTypes.string,
 };
 
 export default DetailCard;

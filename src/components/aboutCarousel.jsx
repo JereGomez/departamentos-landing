@@ -14,9 +14,10 @@ const AboutCarousel = () => {
       <Card
         className="card h-100"
         style={{
-          backgroundColor: "rgb(231, 231, 218,0.3)",
+          backgroundColor: "rgb(238, 234, 228)",
           border: "none",
           width: "90%",
+          color: "rgb(70,70,70)",
         }}
       >
         <Container style={{ paddingTop: "1%", paddingBottom: "1%" }}>
@@ -41,21 +42,22 @@ const AboutCarousel = () => {
             <Col lg={6}>
               <h2
                 className="display-5 fw-bold mb-3"
-                style={{ fontFamily: "Serif" }}
+                style={{ fontFamily: "Serif", color: "rgb(30,30,30)" }}
               >
-                About Our Departments
+                Nuestros Departamentos
               </h2>
               <p className="lead mb-4" style={{ fontFamily: "sans-serif" }}>
-                Discover the unique charm of our departments, each offering a
-                blend of natural beauty, rich culture, and unforgettable
-                experiences. From pristine beaches to lush mountains, our
-                diverse landscapes promise something for every traveler.
+                Descubre el encanto único de nuestros departamentos en
+                Bariloche, donde la belleza natural se fusiona con una rica
+                cultura y experiencias inolvidables. Desde lagos cristalinos
+                hasta montañas imponentes, nuestros paisajes ofrecen algo
+                especial para cada viajero.
               </p>
               <ul className="list-unstyled" style={{}}>
-                <li className="mb-2">• Stunning natural landscapes</li>
-                <li className="mb-2">• Rich cultural heritage</li>
-                <li className="mb-2">• Luxurious accommodations</li>
-                <li>• Unforgettable local experiences</li>
+                <li className="mb-2">• Impresionantes paisajes naturales</li>
+                <li className="mb-2">• Rica herencia cultural</li>
+                <li className="mb-2">• Alojamiento de lujo</li>
+                <li>• Experiencias locales inolvidables</li>
               </ul>
             </Col>
           </Row>
